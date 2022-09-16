@@ -3,17 +3,17 @@
 
 
 // Retrieve a list of books from the server.
-async function how(){
-    let getBooks = await fetch(`http://localhost:3000/listBooks`,{
-    method:"GET",
-    headers: null,
-    body:null,
-})
+// async function how(){
+//     let getBooks = await fetch(`http://localhost:3000/listBooks`,{
+//     method:"GET",
+//     headers: null,
+//     body:null,
+// })
 
-let bookList = await getBooks.json();
-console.log(bookList);}
+// let bookList = await getBooks.json();
+// console.log(bookList);}
 
-how()
+// how()
 
 
 
