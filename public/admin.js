@@ -10,7 +10,7 @@ async function getList() {
 
     console.log(bookUnit)
 
-    //bookUnit.forEach()
+    bookUnit.forEach(bookAdmin)
 }
 
 // Display a list of book titles to the admin.
@@ -20,14 +20,23 @@ async function getList() {
 function bookAdmin(book){
     //creating a div for each book
     let bookEntry = document.createElement("div")
-    bookEntry.setAttribute('class','book-entry')
-    //insert an input
+    //calling and appending the book titles
+    let bookTitle = document.createTextNode(`${book.title}`)
+    bookEntry.append(bookTitle)
+    //
     let bookInput = document.createElement("input")
-    //label the input with the 
-    bookInput.setAttribute 
-}
+    bookInput.setAttribute('type','number')
+    bookEntry.append(bookInput)
+    
+    //appending div
+    document.body.append(bookEntry)
+//     bookEntry.setAttribute('class','book-entry')
+//     //insert an input
+//     let bookInput = document.createElement("input")
+//     //label the input with the 
+//     bookInput.setAttribute 
+ }
 
-// Place a text input next to each book title.
 // Give each text input a value: the quantity of the associated book.
 // Place a submit button next to each text input.
 // When the submit button is clicked, retrieve the quantity
