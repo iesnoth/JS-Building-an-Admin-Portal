@@ -26,15 +26,14 @@ function bookAdmin(book){
     //
     let bookInput = document.createElement("input")
     bookInput.setAttribute('type','number')
+    bookInput.setAttribute('id','book-input')
     bookEntry.append(bookInput)
+    //document.getElementById('book-input').value = `${book.quantity}`;
+    //let bookQuantity = `${book.quantity}`
+
     
     //appending div
     document.body.append(bookEntry)
-//     bookEntry.setAttribute('class','book-entry')
-//     //insert an input
-//     let bookInput = document.createElement("input")
-//     //label the input with the 
-//     bookInput.setAttribute 
  }
 
 // Give each text input a value: the quantity of the associated book.
