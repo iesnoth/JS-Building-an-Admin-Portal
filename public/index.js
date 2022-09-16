@@ -6,11 +6,13 @@ async function main() {
     books.forEach(renderBook)
 }
 
+//function which formats all the books with HTML and CSS
 function renderBook(book) {
     let bookContainer = document.querySelector('.book-container')
     bookContainer.innerHTML += `
         <div class="col-sm-3">
             <div class="card" style="width: 100%;">
+            //this function is taking all the info from a "book" object
                 ${book.imageURL ? `
                     <img class="card-img-top" src="${book.imageURL}" />
                 `

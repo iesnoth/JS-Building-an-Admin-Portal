@@ -3,26 +3,35 @@
 
 
 // Retrieve a list of books from the server.
-// async function how(){
-//     let getBooks = await fetch(`http://localhost:3000/listBooks`,{
-//     method:"GET",
-//     headers: null,
-//     body:null,
-// })
+async function getList() {
 
-// let bookList = await getBooks.json();
-// console.log(bookList);}
+    let response = await fetch('http://localhost:3001/listBooks')
+    let bookUnit = await response.json()
 
-// how()
+    console.log(bookUnit)
 
-
-
-
-
+    //bookUnit.forEach()
+}
 
 // Display a list of book titles to the admin.
+//I need to create a function to get each title out of the array and individual object,
+//write HTML to make an input field and submit button next to each title
+//when a new quantity is put in, have the submit button dynamically send information from the admin site to the front site
+function bookAdmin(book){
+    //creating a div for each book
+    let bookEntry = document.createElement("div")
+    bookEntry.setAttribute('class','book-entry')
+    //insert an input
+    let bookInput = document.createElement("input")
+    //label the input with the 
+    bookInput.setAttribute 
+}
+
 // Place a text input next to each book title.
 // Give each text input a value: the quantity of the associated book.
 // Place a submit button next to each text input.
 // When the submit button is clicked, retrieve the quantity
 //from the associated text input and save the updated quantity to the server.
+
+
+getList()
