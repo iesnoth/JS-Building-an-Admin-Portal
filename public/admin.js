@@ -57,3 +57,5 @@ function bookAdmin(book) {
 }
 
 getList()
+
+//countContainter.textcontent = countValue
