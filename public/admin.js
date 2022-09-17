@@ -37,9 +37,8 @@ function bookAdmin(book) {
     let text = document.createTextNode("Submit");
     submit.appendChild(text);
     bookEntry.append(submit)
-    
     //ok, so the test works, but it sets off all the alerts at once for some reason
-    document.getElementById('submitButton').addEventListener('click', patchIt)
+    submit.addEventListener('click', patchIt)
    
     async function patchIt() {
         let response = await fetch('http://localhost:3001/updateBook',{
@@ -48,9 +47,11 @@ function bookAdmin(book) {
                 'Content-type':'application/json'
             },
             body:JSON.stringify({
-                quantity: 1000 //this is a test number
+                id:`${book.id}`,
+                quantity: `${bookInput.value}`
             })
-        });
+        },
+        false);
 
         let updatedBook = await response.json()
         alert(updatedBook)
