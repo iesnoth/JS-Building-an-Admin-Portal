@@ -34,8 +34,6 @@ function bookAdmin(book) {
 
     submit.addEventListener('click', patchIt)
     async function patchIt() {
-        //the function isn't passing on the input value, but the original value.
-        //I don't know how to get it to stop
         let response = await fetch('http://localhost:3001/updateBook', {
             method: 'PATCH',
             headers: {
