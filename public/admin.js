@@ -42,7 +42,7 @@ function bookAdmin(book) {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify({
-                "id": `${book.id}`,
+                "id": book.id,
                 "quantity": `${bookInput.value}`
             })
         });

@@ -2,31 +2,31 @@
   "books": [
     {
       "id": 1,
-      "title": "The Shinobi Initiative",
+      "title": "This book sucks",
       "description": "The reality-bending adventures of a clandestine service agency in the year 2166",
       "year": 2014,
-      "quantity": "10",
+      "quantity": "4563",
       "imageURL": "/assets/shinobi-initiative.jpeg"
     },
     {
       "id": 2,
-      "title": "Tess the Wonder Dog",
+      "title": "This book sucks",
       "description": "The tale of a dog who gets super powers",
       "year": 2007,
-      "quantity": "3",
+      "quantity": "23423",
       "imageURL": "/assets/tess.jpg"
     },
     {
       "id": 3,
-      "title": "The Annals of Arathrae",
+      "title": "This book sucks",
       "description": "This anthology tells the intertwined narratives of six fairy tales.",
       "year": 2016,
-      "quantity": "8",
+      "quantity": "10",
       "imageURL": "/assets/arathrae.jpeg"
     },
     {
       "id": 4,
-      "title": "W∀RP",
+      "title": "This book sucks",
       "description": "A time-space anomaly folds matter from different points in earth's history in on itself, sending six unlikely heroes on a race against time as worlds literally collide.",
       "year": 2010,
       "quantity": "4",
