@@ -29,22 +29,48 @@ function bookAdmin(book) {
     let bookInput = document.createElement("input")
     bookInput.setAttribute('type', 'number')
     bookInput.setAttribute('id', 'book-input')
+    bookInput.setAttribute(`placeholder`, `${book.quantity}`)
     bookEntry.append(bookInput)
     //SUBMIT BUTTONS
-    let submit = document.createElement("button")
-    let text = document.createTextNode("Submit")
-    submit.appendChild(text)
+    let submit = document.createElement("button");
+    submit.setAttribute('id', 'submitButton');
+    let text = document.createTextNode("Submit");
+    submit.appendChild(text);
     bookEntry.append(submit)
-
 
 
     //appending div
     document.body.append(bookEntry)
+
+    //ok, so the test works, but it sets off all the alerts at once for some reason
+    document.getElementById('submitButton').addEventListener('click', patchIt)
+   
+    async function patchIt() {
+        let response = await fetch('http://localhost:3001/updateBook',{
+            method:'PATCH',
+            headers:{
+                'Content-type':'application/json'
+            },
+            body:JSON.stringify({
+                quantity: 1000
+            })
+        });
+
+        let updatedBook = await response.json()
+        alert(updatedBook)
+    }
+
+
+
 }
+
+getList()
+
+
 
 // Give each text input a value: the quantity of the associated book.
 // When the submit button is clicked, retrieve the quantity
 //from the associated text input and save the updated quantity to the server.
 
 
-getList()
+
