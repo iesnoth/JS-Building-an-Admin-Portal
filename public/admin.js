@@ -48,7 +48,7 @@ function bookAdmin(book) {
                 'Content-type':'application/json'
             },
             body:JSON.stringify({
-                quantity: 1000
+                quantity: 1000 //this is a test number
             })
         });
 
