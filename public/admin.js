@@ -34,7 +34,8 @@ function bookAdmin(book) {
 
     submit.addEventListener('click', patchIt)
     async function patchIt() {
-        //The problem here might be that the index.html takes book.quantity and not bookInput.value?
+        //the function isn't passing on the input value, but the original value.
+        //I don't know how to get it to stop
         let response = await fetch('http://localhost:3001/updateBook', {
             method: 'PATCH',
             headers: {
@@ -46,8 +47,8 @@ function bookAdmin(book) {
             })
         });
 
-        let updatedBook = await response.json()
-        alert(updatedBook)
+        await response.json()
+        alert(`${book.quantity}`)
     }
     bookEntry.append(submit)
     //appending div
