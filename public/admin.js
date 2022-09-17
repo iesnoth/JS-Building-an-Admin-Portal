@@ -28,7 +28,7 @@ function bookAdmin(book) {
     //making inputs
     let bookInput = document.createElement("input")
     bookInput.setAttribute('type', 'number')
-    bookInput.setAttribute('id', 'book-input')
+    bookInput.value = `${book.quantity}`
     bookInput.setAttribute(`placeholder`, `${book.quantity}`)
     bookEntry.append(bookInput)
     //SUBMIT BUTTONS
@@ -41,17 +41,17 @@ function bookAdmin(book) {
     submit.addEventListener('click', patchIt)
    
     async function patchIt() {
+        //The problem here might be that the index.html takes book.quantity and not bookInput.value?
         let response = await fetch('http://localhost:3001/updateBook',{
             method:'PATCH',
             headers:{
                 'Content-type':'application/json'
             },
             body:JSON.stringify({
-                id:`${book.id}`,
-                quantity: `${bookInput.value}`
+                "id":`${book.id}`,
+                "quantity": `${bookInput.value}`
             })
-        },
-        false);
+        });
 
         let updatedBook = await response.json()
         alert(updatedBook)
