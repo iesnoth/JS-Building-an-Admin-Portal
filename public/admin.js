@@ -37,11 +37,7 @@ function bookAdmin(book) {
     let text = document.createTextNode("Submit");
     submit.appendChild(text);
     bookEntry.append(submit)
-
-
-    //appending div
-    document.body.append(bookEntry)
-
+    
     //ok, so the test works, but it sets off all the alerts at once for some reason
     document.getElementById('submitButton').addEventListener('click', patchIt)
    
@@ -60,7 +56,8 @@ function bookAdmin(book) {
         alert(updatedBook)
     }
 
-
+ //appending div
+    document.body.append(bookEntry)
 
 }
 
